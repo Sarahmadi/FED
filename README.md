@@ -101,7 +101,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownlaptop.jpg" width="375px" alt="breakdown van de hele home pagina op laptop grootte (1e versie)">
+  <img src="readme-images/breakdownmobiel.jpg" width="375px" alt="breakdown van de hele home pagina op mobiel grootte (2e versie)">
+  <img src="readme-images/breakdownmobiel2.jpg" width="375px" alt="breakdown van de hele 2e pagina op mobiel grootte (2e versie)">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
