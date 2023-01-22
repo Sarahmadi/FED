@@ -120,7 +120,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Voortgang 1 (week 2)
 
 <details>
-  <summary>uitwerken voor 1e voortgang</summary>
+  <summary>Ziek ivm operatie</summary>
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
@@ -153,7 +153,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Voortgang 2 (week 3)
 
 <details>
-  <summary>uitwerken voor 2e voortgang</summary>
+  <summary>Ziek ivm operatie</summary>
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
@@ -186,7 +186,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Toegankelijkheidstest 2/2 (week 4)
 
 <details>
-  <summary>uitwerken na test in 8e werkgroep</summary>
+  <summary>Ziek ivm operatie</summary>
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
@@ -223,7 +223,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Voortgang 3 (week 4)
 
 <details>
-  <summary>uitwerken voor 3e voortgang</summary>
+  <summary>Ziek ivm operatie</summary>
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
@@ -259,22 +259,34 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/uitkomst1.jpg" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/uitkomst2.jpg" width="375px" alt="uitomst opdracht 1">
+      <img src="readme-images/uitkomst3.jpg" width="375px" alt="uitomst opdracht 1">
+        <img src="readme-images/uitkomst4.jpg" width="375px" alt="uitomst opdracht 1">
+          <img src="readme-images/uitkomst5.jpg" width="375px" alt="uitomst opdracht 1">
+
+
+
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/class1.jpg" width="375px" alt="top">
+  <img src="readme-images/class2.jpg" width="375px" alt="top">
+  Ik heb geleerd om voor de 2e html pagina, 1 class aan te maken en deze op de main te zetten. Ik snapte eerst echt niet hoe ik de css voor de 2e html pagina moest maken, ik had namelijk overal een aparte class op gezet. Nina (studentassistent) had mij uitgelegd dat het ook op deze manier kon.
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/nietgelukt1.jpg" width="375px" alt="bummer">
 </details>
-
-
+Dit is hoe het eruit ziet.
+  <img src="readme-images/nietgelukt2.jpg" width="375px" alt="bummer">
+</details>
+Bij mij is het niet gelukt om het zo specifiek te maken als in het echt. Ik had hier uiteindelijk te weinig tijd voor en had mij meer gefocused om het 'algemene' plaatje kloppend te maken, dus niet alle details kloppen precies.
 
 
 
@@ -285,8 +297,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  Om meer info over de flexbox te krijgen had Nina (studentassistent) mij doorverwezen naar deze site, om bijv. afbeeldingen naast elkaar of onder elkaar te krijgen.
+  2. https://flexboxfroggy.com/#nl
+  Nina (studentassistent) verwees mij door naar deze site om zelf wat dingen uit te proberen.
 
 </details>

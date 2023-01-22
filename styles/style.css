@@ -40,13 +40,16 @@ header nav {
 }
 
 header img {
-	width: 3em;
+	width: 3.5em;
 }
 
 header p {
-	font-size: 60%;
-	background-color: pink;
-	padding: 1em;
+	font-size: 0.7em;
+	background-color: #e8b3c0;
+	padding: 1.1em;
+	text-align: center;
+	justify-content: center;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 header nav img:nth-of-type(1){
@@ -68,13 +71,17 @@ header form {
 	display: flex;
 	justify-content: space-between;
 	margin: 0.6em;
-	border: 1px solid black;
+	border: 0.5px solid black;
 }
+
 header input[type="search"] {
 	width: calc(100% - 3em);
 	text-indent: 0.6em;
 	border: none;
+	font-size: 1em;
+	padding: 0.7em;
 }
+
 header button[type="submit"] {
 	width: 2.5em;
 	height: 2.5em;
@@ -82,11 +89,83 @@ header button[type="submit"] {
 	border: none;
 }
 
+header nav:last-of-type {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.4);
+	left: -110vw;
+	transition: .5s;
+}
+
+header nav:last-of-type > section:last-of-type {
+	position: relative;
+	width: 10vw;
+	height: 10vw;
+	background-color: pink;
+}
+header nav:last-of-type img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: .8em;
+	height: .8em;
+}
+
+header nav:last-of-type > section:first-of-type {
+	width: 90vw;
+	height: 100vh;
+	padding: .6em;
+	background-color: white;
+}
+
+header nav:last-of-type section section {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1.5em;
+}
+
+header nav:last-of-type select {
+	border: none;
+	font-weight: bold;
+}
+
+header nav:last-of-type ul {
+	list-style: none;
+}
+
+header nav:last-of-type li {
+	margin: .6em 0;
+}
+
+header nav:last-of-type a {
+	display: block;
+	padding: .8em;
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #F6F5F5;
+	border-radius: 5px;
+}
+
+header nav:last-of-type.zichtbaar {
+	left: 0;
+	transition: .5s;
+}
+body.zichtbaar {
+	overflow-y: hidden;
+}
+
 main > section:first-of-type img {
 	width: 100%;
 }
 
 main > section:nth-of-type(2) section {
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -131,9 +210,32 @@ main > section:nth-of-type(6) section {
 	background-color: #f6f5f5;
 }
 
-/* main > section:nth-of-type(2) section p {
+main > section:nth-of-type(3) p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
 
-} */
+main > section:nth-of-type(5) {
+    background-color: #F4D0E1;
+}
+
+main > section:nth-of-type(5) article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+main > section:nth-of-type(5) button {
+    width: fit-content;
+    padding: .5em 1.5em;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
 main > section:nth-of-type(2) section img {
 	width: 30%;
 }
@@ -176,31 +278,40 @@ main > section:nth-of-type(4) button {
 }
 
 main > section:nth-of-type(5) h2 {
-	background-color: pink;
+	background-color: #F4D0E1;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 main > section:nth-of-type(5) p {
-	background-color: pink;
+	background-color: #F4D0E1;
+	font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
 }
 
 main > section:nth-of-type(5) button {
-	background-color: pink;
+	background-color: #F4D0E1;
 }
 
 main > section:nth-of-type(6) h3 {
 	background-color: #EDEDED;
+	padding-top: 1.5em;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
 }
 
 main > section:nth-of-type(6) p {
 	background-color: #EDEDED;
+	font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
 }
 
 main > section:nth-of-type(7) p {
 	background-color: #EDEDED;
 	color: pink;
 	padding-bottom: 1em;
+	font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
 }
-
 
 footer > section:nth-of-type(1) {
 	background-color: #EDEDED;
@@ -224,10 +335,23 @@ footer > section:nth-of-type(4) img {
 footer > section:nth-of-type(4) {
 	background-color: black;
 	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	padding-top: 1em;
+	padding-bottom: 2em;
 }
 
-footer > section:nth-of-type(5) img {
-	width: 2em;
+footer > section:nth-of-type(4) {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: auto 1em;
+}
+
+footer > section:nth-of-type(4) img {
+    margin-left: auto;
+    width: 1em;
+    height: 1em;
 }
 
 h1,h2 {
@@ -243,5 +367,303 @@ h3 {
 }
 
 footer {
-	background-color: pink;
+	background-color: #F4D0E1;
+}
+
+footer > section:nth-of-type(5) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3em;
+}
+
+footer > section:nth-of-type(5) img {
+    height: 1.2em;
+}
+
+footer > section:nth-of-type(5) section {
+    display: flex;
+    gap: 1em;
+}
+
+footer > section:nth-of-type(1),
+footer > section:nth-of-type(2),
+footer > section:nth-of-type(3) {
+ padding: 1em .3em;
+ background-color: #EDEDED;
+ border-top: 1px solid gray;
+}
+
+footer button {
+ padding: .6em 0;
+ background-color: white;
+ border: 1px solid black;
+ border-radius: 6px;
+ font-weight: bold;
+}
+
+footer > section:nth-of-type(1) {
+ display: flex;
+ flex-direction: column;
+ gap: .3em;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 0.8em;
+}
+
+footer > section:nth-of-type(1) form {
+ position: relative;
+ background-color: white;
+ border: 1px solid gray;
+ border-radius: 6px;
+ line-height: 2em;
+}
+
+footer > section:nth-of-type(1) input[type="email"] {
+ text-indent: 0.6em;
+ border: none;
+}
+
+footer > section:nth-of-type(1) button[type="submit"] {
+ position: absolute;
+ right: 0;
+ width: 9em;
+}
+
+footer > section:nth-of-type(2) {
+ display: grid;
+ grid-template-columns: auto 7.6em;
+ gap: 1em;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 0.8em;
+}
+
+footer > section:nth-of-type(2) section {
+ display: flex;
+ flex-direction: column;
+ gap: .3em;
+}
+
+footer > section:nth-of-type(2) button {
+ height: fit-content;
+ margin: auto 0;
+}
+
+footer > section:nth-of-type(3) {
+ display: flex;
+ flex-direction: column;
+ gap: .3em;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 0.8em;
+}
+
+footer > section:nth-of-type(3) button {
+ width: 100%;
+}
+
+.main h1 {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-top: 1em;
+	margin-left: 1em;
+}
+
+.main > section:nth-of-type(3) h2 {
+	background-color: white;
+	font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    border-style: inset;
+    padding: 0.9em;
+    margin: 0.2em;
+    margin-bottom: 1.5em;
+}
+
+.main > section:nth-of-type(4) h3 {
+	background-color: #F4D0E1;
+    padding: 0.8em;
+    font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main > section:nth-of-type(2) p {
+	margin-top: 1.4em;
+	margin-bottom: 0.7em;
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	border: inset;
+	display: inline-block;
+	justify-content: center;
+	padding: 0.7em;
+}
+
+.main > section:nth-of-type(5) {
+	background-color: white;
+}
+
+.main > section:nth-of-type(5) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(6) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(7) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(8) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(9) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(10) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(11) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(12) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(13) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(14) img {
+	width: 50%;
+}
+
+.main > section:nth-of-type(5) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F4D0E1;
+}
+
+.main > section:nth-of-type(6) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F4D0E1;
+}
+
+.main > section:nth-of-type(7) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+	padding: 0.1em;
+}
+
+.main > section:nth-of-type(8) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+.main > section:nth-of-type(9) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+.main > section:nth-of-type(10) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+.main > section:nth-of-type(11) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+.main > section:nth-of-type(12) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+.main > section:nth-of-type(13) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+.main > section:nth-of-type(14) p {
+	color:black;
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+.main > section:nth-of-type(15) h4 {
+	background-color: white;
+	font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    border-style: inset;
+    padding: 0.9em;
+    margin: 0.2em;
+	margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.main > section:nth-of-type(16) p {
+	margin-top: 1.4em;
+	margin-bottom: 0.7em;
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	border: inset;
+	display: inline-block;
+	justify-content: center;
+	padding: 0.7em;
+	margin-bottom: 2.5em;
+}
+
+.main > section:nth-of-type(17) h5 {
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #EDEDED;
+	padding-top: 0.7em;
+	padding-bottom: 0.5em;
+}
+
+.main > section:nth-of-type(17) p {
+	font-size: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #EDEDED;
+}
+
+main > section:nth-of-type(18) p {
+	background-color: #EDEDED;
+	color: pink;
+	padding-bottom: 1em;
+	font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+	padding-top: 0.5em;
+	padding-bottom: 0.9em;
 }
