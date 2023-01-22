@@ -33,7 +33,7 @@ body {
   background-color: white;
 }
 
-header nav {
+header nav:first-of-type {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	padding: 0.6em;
@@ -170,7 +170,8 @@ main > section:nth-of-type(2) section {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 0.6em;
-	padding-left: 1em;
+}
+main > section:nth-of-type(2) section:not(main > section:nth-of-type(2) section:has(article)) {
 	background-color: #f6f5f5;
 }
 
@@ -313,46 +314,53 @@ main > section:nth-of-type(7) p {
     font-size: 0.9em;
 }
 
-footer > section:nth-of-type(1) {
-	background-color: #EDEDED;
-	padding-bottom: 1em;
-}
 
-footer > section:nth-of-type(2) {
-	background-color: #EDEDED;
-	padding-bottom: 1em;
-}
 
+footer > section:nth-of-type(1),
+footer > section:nth-of-type(2),
 footer > section:nth-of-type(3) {
 	background-color: #EDEDED;
-	padding-bottom: 1em;
+	padding: .5em .5em 1em .5em;
 }
 
-footer > section:nth-of-type(4) img {
-	width: 2em;
-}
 
 footer > section:nth-of-type(4) {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+	padding: .5em;
 	background-color: black;
 	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 0.8em;
-	padding-top: 1em;
-	padding-bottom: 2em;
+}
+footer > section:nth-of-type(4) p {
+	font-weight: bold;
 }
 
-footer > section:nth-of-type(4) {
-    background-color: black;
-    color: white;
-    display: grid;
-    grid-template-columns: auto 1em;
+footer summary {
+	display: block;
+	list-style: none;
+	font-weight: bold;
+}
+footer details summary::-webkit-details-marker {
+	display: none;
 }
 
-footer > section:nth-of-type(4) img {
-    margin-left: auto;
-    width: 1em;
-    height: 1em;
+footer summary::after {
+	position: absolute;
+	right: .5em;
+    content: ' \002B'; /* plus */
 }
+footer details[open] summary::after {
+    content: " \002D"; /* min */
+}
+
+footer > section:nth-of-type(4) section {
+	display: flex;
+	gap: 1em;
+}
+
+
+
 
 h1,h2 {
     color:black;
@@ -421,6 +429,8 @@ footer > section:nth-of-type(1) form {
 footer > section:nth-of-type(1) input[type="email"] {
  text-indent: 0.6em;
  border: none;
+ padding: .6em 0;
+
 }
 
 footer > section:nth-of-type(1) button[type="submit"] {
@@ -460,27 +470,55 @@ footer > section:nth-of-type(3) button {
  width: 100%;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .main h1 {
     font-size: 1.2em;
     font-weight: lighter;
-    margin-top: 1em;
-	margin-left: 1em;
 }
 
-.main > section:nth-of-type(3) h2 {
+.main > section:first-of-type {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+	padding: .5em;
+}
+
+.main > section:first-of-type ul {
+	display: flex;
+	justify-content: space-between;
+}
+.main > section:first-of-type li {
+	padding: .5em .6em;
+	font-weight: bold;
+	list-style: none;
+	border: 1px solid gray;
+	border-radius: 6px;
+}
+.main > section:first-of-type button {
+	width: 100%;
+	padding: .8em .6em;
 	background-color: white;
-	font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    display: flex;
-    justify-content: center;
-    border-style: inset;
-    padding: 0.9em;
-    margin: 0.2em;
-    margin-bottom: 1.5em;
+	border: 1px solid gray;
+	border-radius: 6px;
 }
 
-.main > section:nth-of-type(4) h3 {
+
+
+.main > section:nth-of-type(2) {
+	background-color: white;
+}
+
+.main > section:nth-of-type(2) h2 {
 	background-color: #F4D0E1;
     padding: 0.8em;
     font-size: 0.9em;
@@ -489,181 +527,35 @@ footer > section:nth-of-type(3) button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.main > section:nth-of-type(2) p {
-	margin-top: 1.4em;
-	margin-bottom: 0.7em;
-	font-size: 0.9em;
+.main > section:nth-of-type(2) section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: .5em;
+}
+.main > section:nth-of-type(2) article {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+.main > section:nth-of-type(2) article img {
+	width: 100%;
+}
+
+.main > section:nth-of-type(2) article p:first-of-type {
+	font-weight: normal;
+}
+.main > section:nth-of-type(2) article p:last-of-type {
 	font-weight: bold;
-	font-family: Arial, Helvetica, sans-serif;
-	border: inset;
-	display: inline-block;
-	justify-content: center;
-	padding: 0.7em;
+	margin-bottom: 1em;
 }
 
-.main > section:nth-of-type(5) {
-	background-color: white;
-}
-
-.main > section:nth-of-type(5) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(6) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(7) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(8) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(9) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(10) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(11) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(12) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(13) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(14) img {
-	width: 50%;
-}
-
-.main > section:nth-of-type(5) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #F4D0E1;
-}
-
-.main > section:nth-of-type(6) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #F4D0E1;
-}
-
-.main > section:nth-of-type(7) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-	padding: 0.1em;
-}
-
-.main > section:nth-of-type(8) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-}
-
-.main > section:nth-of-type(9) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-}
-
-.main > section:nth-of-type(10) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-}
-
-.main > section:nth-of-type(11) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-}
-
-.main > section:nth-of-type(12) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-}
-
-.main > section:nth-of-type(13) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-}
-
-.main > section:nth-of-type(14) p {
-	color:black;
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: white;
-}
-
-.main > section:nth-of-type(15) h4 {
-	background-color: white;
-	font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    display: flex;
-    justify-content: center;
-    border-style: inset;
-    padding: 0.9em;
-    margin: 0.2em;
-	margin-top: 2em;
-    margin-bottom: 1em;
-}
-
-.main > section:nth-of-type(16) p {
-	margin-top: 1.4em;
-	margin-bottom: 0.7em;
-	font-size: 0.9em;
+.main > section:nth-of-type(2) button {
+	width: calc(100% - 1em);
+	margin: 0 .5em;
+	padding: .8em .6em;
 	font-weight: bold;
-	font-family: Arial, Helvetica, sans-serif;
-	border: inset;
-	display: inline-block;
-	justify-content: center;
-	padding: 0.7em;
-	margin-bottom: 2.5em;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 6px;
 }
 
-.main > section:nth-of-type(17) h5 {
-	font-size: 1.2em;
-	font-weight: bold;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #EDEDED;
-	padding-top: 0.7em;
-	padding-bottom: 0.5em;
-}
-
-.main > section:nth-of-type(17) p {
-	font-size: 0.8em;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #EDEDED;
-}
-
-main > section:nth-of-type(18) p {
-	background-color: #EDEDED;
-	color: pink;
-	padding-bottom: 1em;
-	font-family:Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-	padding-top: 0.5em;
-	padding-bottom: 0.9em;
-}
